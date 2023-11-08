@@ -1,0 +1,14 @@
+C:\dev\C#\MrPickering'sAnagramCreator\bin\Debug\net6.0\MrPickering'sAnagramCreator.exe
+C:\dev\C#\MrPickering'sAnagramCreator\bin\Debug\net6.0\MrPickering'sAnagramCreator.deps.json
+C:\dev\C#\MrPickering'sAnagramCreator\bin\Debug\net6.0\MrPickering'sAnagramCreator.runtimeconfig.json
+C:\dev\C#\MrPickering'sAnagramCreator\bin\Debug\net6.0\MrPickering'sAnagramCreator.dll
+C:\dev\C#\MrPickering'sAnagramCreator\bin\Debug\net6.0\MrPickering'sAnagramCreator.pdb
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.AssemblyInfoInputs.cache
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.AssemblyInfo.cs
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.csproj.CoreCompileInputs.cache
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.dll
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\refint\MrPickering'sAnagramCreator.dll
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.pdb
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\MrPickering'sAnagramCreator.genruntimeconfig.cache
+C:\dev\C#\MrPickering'sAnagramCreator\obj\Debug\net6.0\ref\MrPickering'sAnagramCreator.dll
