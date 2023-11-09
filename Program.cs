@@ -10,7 +10,9 @@ class Program
         List<string> anagrams = Anagram.Jumble(plainText);
         foreach(string str in anagrams)
         {
-            Console.WriteLine(str);
+            int i = 0;
+            while (i < 100){ Console.Write(str);i++;Console.Write("  ") ; }
+            
         }
         
         

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\C#\\MrPickering'sAnagramCreator\\MrPickering'sAnagramCreator.csproj",
+      "projectUniqueName": "C:\\dev\\C#\\MrP'sAnagrams\\MrPickering'sAnagramCreator.csproj",
       "projectName": "MrPickering'sAnagramCreator",
-      "projectPath": "C:\\dev\\C#\\MrPickering'sAnagramCreator\\MrPickering'sAnagramCreator.csproj",
+      "projectPath": "C:\\dev\\C#\\MrP'sAnagrams\\MrPickering'sAnagramCreator.csproj",
       "packagesPath": "C:\\Users\\Tomga\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\C#\\MrPickering'sAnagramCreator\\obj\\",
+      "outputPath": "C:\\dev\\C#\\MrP'sAnagrams\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tomga\\AppData\\Roaming\\NuGet\\NuGet.Config",
