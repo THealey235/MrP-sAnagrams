@@ -1,0 +1,6 @@
+#ignore all txts
+*.txt
+#ignore all files in any folder called pseudo
+temp/
+*.sln
+.vs/
