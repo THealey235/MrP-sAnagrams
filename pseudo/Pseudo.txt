@@ -1,2 +1,0 @@
-﻿
-For dupe analyser: Create for loop which checks for c in the string up to the index. Change the 2nd for loop to accomadate and check how cs it finds up to its current point
