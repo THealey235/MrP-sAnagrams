@@ -11,6 +11,9 @@ namespace MrPickeringsAnagramCreator
     internal class Anagram
     {
         static Random rand = new Random();
+        public static int permutations;
+
+        //generates a string of _s the length of plainText
         static string GeneratePlaceholder(int len)
         {
             string temp = "";
@@ -29,6 +32,7 @@ namespace MrPickeringsAnagramCreator
             return total;
         }
 
+        //Executes the formula used to find all possible unique anagrams: (lengthOfWord)! / ((appearancesOfUniqueLetter)! x .... )
         static int CalculatePermutations(List<int> list, int length)
         {
             int total = 0; ;
@@ -60,7 +64,7 @@ namespace MrPickeringsAnagramCreator
         }
 
         //To find the total possible ammount of unique anagrams that can be created from an input
-        static int FindPermutations(string plainText)
+        public static int FindPermutations(string plainText)
         {
             List<int> letterOccurance = new List<int>();
             List<char> lettersCheck = new List<char>();
@@ -79,28 +83,76 @@ namespace MrPickeringsAnagramCreator
             return CalculatePermutations(letterOccurance, plainText.Length);
         }
 
-        //Creates/jumbles the anagrams. Finds all the anagrams
-        public static List<string> Jumble(string plainText)
+        static int findCharNewIndex(int plainTextLength, char[] anagram, int openSpace, int openSpaces)
         {
-            Console.WriteLine(FindPermutations(plainText));
-            //pt = plain text
-            int ptLength = plainText.Length;
-            List<string> anagrams = new List<string>();
-            string placeholder = GeneratePlaceholder(ptLength);
-            char[] anagram = placeholder.ToCharArray();
-            foreach (char c in plainText)
+            for (int i = 0; i < plainTextLength; i++)
             {
-                int charIndex = plainText.IndexOf(c);
-                int charNewIndex;
-                do
+                if (anagram[i] == '_')
                 {
-                    charNewIndex = rand.Next(ptLength);
+                    //goes through each open space until we are on the one randomly picked
+                    //essentially just counts down to the random space
+                    if (openSpace != 0)
+                    {
+                        openSpace--;
+                    }
+                    else
+                    {
+                        return i;
+                    }
                 }
-                while (charNewIndex == charIndex || anagram[charNewIndex] != '_');
-                anagram[charNewIndex] = c;
             }
-            anagrams.Add(new string(anagram));
+            return 0;
+        }
 
+        //Creates/jumbles the anagrams. Finds all the anagrams
+        public static List<string> Jumble(string plainText, int ammountOfAnagrams)
+        {
+            permutations = (ammountOfAnagrams > permutations) ? permutations : ammountOfAnagrams;
+
+            int plainTextLength = plainText.Length;
+            List<string> anagrams = new List<string>();
+
+            //used to skip an anagram permutation if we have already generated it
+            bool skipAnagram = false;
+
+            //using the very efficient brute force method
+            while (anagrams.Count() < permutations)
+            {
+                char[] anagram = GeneratePlaceholder(plainTextLength).ToCharArray();
+
+                foreach (char c in plainText)
+                {
+                    int charIndex = plainText.IndexOf(c);
+                    int openSpace;
+                    int charNewIndex;
+                    do
+                    {
+                        int openSpaces = 0;
+                        foreach (char character in anagram)
+                        {
+                            if (character == '_')
+                            {
+                                openSpaces++;
+                            }
+                        }
+
+                        openSpace = rand.Next(openSpaces);
+                        Console.WriteLine(openSpace);
+                        Console.WriteLine(anagram);
+                        charNewIndex = findCharNewIndex(plainTextLength, anagram, openSpace, openSpaces);
+                    }
+                    while (openSpace == charIndex);
+                    anagram[charNewIndex] = c;
+                }
+                string finishedAnagram = new string(anagram);
+                foreach (string i in anagrams) { if (i == finishedAnagram) { skipAnagram = true; break; } }
+                if (skipAnagram)
+                {
+                    skipAnagram = false;
+                    continue;
+                }
+                anagrams.Add(finishedAnagram);
+            }
             return anagrams;
         }
     }
